@@ -1,0 +1,233 @@
+@import "_mixin";
+// Root
+$title: "ALK Sanet", sans-serif;
+$subtitle: "BPG Arial", sans-serif;
+
+// Text Colors
+$white: #fff;
+$black: #000;
+
+// Background Color
+$dark: #434343;
+$light: #ebebeb;
+$line: #b4b4b4;
+$title-bg: #2a2a2a;
+
+// Container Body Size
+$container-width: 1140px;
+
+.fix-bg {
+  background: url("/imgs/bg.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  z-index: -1;
+
+  .main-box {
+    @include flexcenter(column, none);
+    .main-title {
+      font-family: $title;
+      color: $white;
+      font-size: 40px;
+      margin-top: 55px;
+    }
+    .main-subtitle {
+      font-family: $subtitle;
+      color: $white;
+      font-size: 10px;
+      margin-top: 5px;
+    }
+  }
+  .container {
+    @include flexcenter(column, none);
+
+    img {
+      height: 430px;
+      width: $container-width;
+      object-fit: cover;
+      object-position: bottom;
+      margin-top: 35px;
+      transform: translateX(-7.7px);
+    }
+  }
+  .blog {
+    @include flexcenter(column, $white);
+    width: $container-width;
+    margin: 0 auto;
+    .blog-title {
+      font-family: $title;
+      color: $black;
+      font-size: 24px;
+      margin: 45px 0;
+      &::after {
+        content: "";
+        border-bottom: $line 2px solid;
+        width: 110px;
+        display: block;
+        transform: translateX(130%);
+        padding: 10px 0;
+      }
+    }
+    .blog-box {
+      @include flexcenter(row, $light);
+      width: $container-width;
+      .box-bg {
+        @include flexcenter(column, none);
+        border-right: 10px solid $white;
+        transition: all 0.3s ease;
+        &:hover {
+          background: $line;
+          color: $white;
+        }
+        &:last-child {
+          border-right: 5px;
+          height: 100%;
+        }
+        img {
+          padding: 30px 0;
+        }
+        p {
+          padding: 20px 35px;
+          line-height: 1.6;
+        }
+        .btn {
+          padding: 7px 16.39px;
+          color: $white;
+          background: $title-bg;
+          border: none;
+          border-radius: 10px 10px 0 0;
+          transition: all 0.2s ease;
+          &:hover {
+            padding: 7px 12px;
+          }
+        }
+        .btn-1 {
+          align-self: flex-end;
+          padding: 7px 16px;
+          color: $white;
+          background: $title-bg;
+          border: none;
+          border-radius: 10px 0 0 0;
+          transition: all 0.2s ease;
+          &:hover {
+            padding: 7px 12px;
+          }
+        }
+        .btn-2 {
+          align-self: flex-start;
+          padding: 7px 16px;
+          color: $white;
+          background: $title-bg;
+          border: none;
+          border-radius: 0 10px 0 0;
+          transition: all 0.2s ease;
+          &:hover {
+            padding: 7px 12px;
+          }
+        }
+      }
+    }
+  }
+  .galery-bg {
+    background: $dark;
+    width: $container-width;
+    height: 650px;
+    margin: 0 auto;
+    .galery-title {
+      background: $title-bg;
+      width: 898px;
+      height: 102px;
+      margin: 0 auto;
+      img {
+        width: 449px;
+      }
+      .galery-txt {
+        font-family: $title;
+        color: $white;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 35px;
+        &::after {
+          content: "";
+          border-bottom: $line 2px solid;
+          width: 110px;
+          display: block;
+          transform: translateX(350%);
+          padding: 10px 0;
+          margin-bottom: 20px;
+        }
+      }
+      .galery-box {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .card {
+    @include flexcenter(row, $white);
+    width: $container-width;
+    margin: 0 auto;
+    img {
+      width: 569.33px;
+    }
+    .content {
+      @include flexcenter(column, none);
+      .card-title {
+        font-family: $title;
+        font-size: 25px;
+        padding-bottom: 35px;
+      }
+      .card-p {
+        font-family: $subtitle;
+        padding: 0 30px;
+        line-height: 1.6;
+      }
+    }
+  }
+  .card-reverse {
+    @include flexcenter(row, $white);
+    flex-direction: row-reverse;
+    width: $container-width;
+    margin: 0 auto;
+    img {
+      width: 569.33px;
+    }
+    .content {
+      @include flexcenter(column, none);
+      .card-title {
+        font-family: $title;
+        font-size: 25px;
+        padding-bottom: 35px;
+      }
+      .card-p {
+        font-family: $subtitle;
+        padding: 0 30px;
+        line-height: 1.6;
+      }
+    }
+  }
+  .icons-footer {
+    @include flexcenter(column, none);
+    width: $container-width;
+    margin: 0 auto;
+    height: 180px;
+    .icon {
+      font-size: 30px;
+      margin: 0 20px;
+      cursor: pointer;
+      color: $line;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $light;
+      }
+    }
+    p {
+      font-family: $subtitle;
+      color: $line;
+      font-size: 12px;
+      padding-top: 30px;
+      transform: translateX(45px);
+    }
+  }
+}
