@@ -1033,6 +1033,9 @@ body.lb-disable-scrolling {
 }
 
 @media (max-width: 1200px) and (min-width: 1100px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .blog-box {
     width: 80% !important;
   }
@@ -1048,6 +1051,9 @@ body.lb-disable-scrolling {
 }
 
 @media (max-width: 1100px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .blog-box {
     width: 70% !important;
     display: -webkit-box;
@@ -1078,6 +1084,9 @@ body.lb-disable-scrolling {
 }
 
 @media (max-width: 900px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .card {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1146,7 +1155,7 @@ body.lb-disable-scrolling {
   }
   .galery-txt {
     text-align: start !important;
-    padding-bottom: 2rem;
+    padding: 2rem;
   }
   .galery-txt::after {
     display: none !important;

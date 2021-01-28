@@ -1,4 +1,7 @@
 @media (max-width: 1200px) and (min-width: 1100px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .blog-box {
     width: 80% !important;
   }
@@ -13,6 +16,9 @@
   }
 }
 @media (max-width: 1100px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .blog-box {
     width: 70% !important;
     @include flexcenter(column !important, none !important);
@@ -28,6 +34,9 @@
   }
 }
 @media (max-width: 900px) {
+  body {
+    overflow-x: hidden !important;
+  }
   .card {
     @include flexcenter(column !important, $white !important);
   }
@@ -52,10 +61,9 @@
   .galery-box a {
     width: 50%;
   }
-
   .galery-txt {
     text-align: start !important;
-    padding-bottom: 2rem;
+    padding: 2rem;
   }
   .galery-txt::after {
     display: none !important;
