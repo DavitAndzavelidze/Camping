@@ -22,7 +22,6 @@ $container-width: 1140px;
   width: 100%;
   background-attachment: fixed;
   overflow-x: hidden;
-  z-index: -1;
 
   .main-box {
     @include flexcenter(column, none);
@@ -36,28 +35,26 @@ $container-width: 1140px;
       font-family: $subtitle;
       color: $white;
       font-size: 10px;
-      margin-top: 5px;
+      margin: 1rem 0 3rem 0;
     }
   }
   .container {
     @include flexcenter(column, none);
-
     img {
-      height: 430px;
-      width: $container-width;
+      height: 80vh;
+      width: 100%;
       object-fit: cover;
       object-position: bottom;
-      margin-top: 35px;
-      transform: translateX(-7.7px);
     }
   }
   .blog {
-    @include flexcenter(column, $white);
-    width: $container-width;
+    @include flexcenter(column, none);
+    max-width: $container-width;
     margin: 0 auto;
     .blog-title {
       font-family: $title;
-      color: $black;
+      text-align: center;
+      color: $white;
       font-size: 24px;
       margin: 45px 0;
       &::after {
@@ -71,14 +68,14 @@ $container-width: 1140px;
     }
     .blog-box {
       @include flexcenter(row, $light);
-      width: $container-width;
+      max-width: $container-width;
+      background: transparent;
       .box-bg {
         @include flexcenter(column, none);
-        border-right: 10px solid $white;
         transition: all 0.3s ease;
         &:hover {
-          background: $line;
           color: $white;
+          border-radius: 30%;
         }
         &:last-child {
           border-right: 5px;
@@ -92,6 +89,7 @@ $container-width: 1140px;
           line-height: 1.6;
         }
         .btn {
+          font-family: $title;
           padding: 7px 16.39px;
           color: $white;
           background: $title-bg;
@@ -102,43 +100,20 @@ $container-width: 1140px;
             padding: 7px 12px;
           }
         }
-        .btn-1 {
-          align-self: flex-end;
-          padding: 7px 16px;
-          color: $white;
-          background: $title-bg;
-          border: none;
-          border-radius: 10px 0 0 0;
-          transition: all 0.2s ease;
-          &:hover {
-            padding: 7px 12px;
-          }
-        }
-        .btn-2 {
-          align-self: flex-start;
-          padding: 7px 16px;
-          color: $white;
-          background: $title-bg;
-          border: none;
-          border-radius: 0 10px 0 0;
-          transition: all 0.2s ease;
-          &:hover {
-            padding: 7px 12px;
-          }
-        }
       }
     }
   }
   .galery-bg {
-    background: $dark;
-    width: $container-width;
-    height: 650px;
+    background: none;
+    max-width: $container-width;
+    height: 600px;
     margin: 0 auto;
     .galery-title {
-      background: $title-bg;
+      background: none;
       width: 898px;
       height: 102px;
       margin: 0 auto;
+      text-align: center;
       img {
         width: 449px;
       }
@@ -147,15 +122,15 @@ $container-width: 1140px;
         color: $white;
         font-size: 24px;
         text-align: center;
-        padding-top: 35px;
+        padding-top: 3rem;
         &::after {
           content: "";
           border-bottom: $line 2px solid;
           width: 110px;
           display: block;
-          transform: translateX(350%);
+          margin: 0 auto;
           padding: 10px 0;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
         }
       }
       .galery-box {
@@ -164,9 +139,25 @@ $container-width: 1140px;
       }
     }
   }
+  .card-txt {
+    font-family: $title;
+    color: $white;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      border-bottom: $line 2px solid;
+      width: 110px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+  }
   .card {
     @include flexcenter(row, $white);
-    width: $container-width;
+    max-width: $container-width;
     margin: 0 auto;
     img {
       width: 569.33px;
@@ -176,7 +167,7 @@ $container-width: 1140px;
       .card-title {
         font-family: $title;
         font-size: 25px;
-        padding-bottom: 35px;
+        padding-bottom: 30px;
       }
       .card-p {
         font-family: $subtitle;
@@ -188,7 +179,7 @@ $container-width: 1140px;
   .card-reverse {
     @include flexcenter(row, $white);
     flex-direction: row-reverse;
-    width: $container-width;
+    max-width: $container-width;
     margin: 0 auto;
     img {
       width: 569.33px;
@@ -209,7 +200,7 @@ $container-width: 1140px;
   }
   .icons-footer {
     @include flexcenter(column, none);
-    width: $container-width;
+    max-width: $container-width;
     margin: 0 auto;
     height: 180px;
     .icon {

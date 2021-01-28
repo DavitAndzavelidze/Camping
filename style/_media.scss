@@ -1,0 +1,63 @@
+@media (max-width: 1200px) and (min-width: 1100px) {
+  .blog-box {
+    width: 80% !important;
+  }
+  .box-bg {
+    width: 80% !important;
+  }
+  .card img {
+    width: 50% !important;
+  }
+  .card-reverse img {
+    width: 50% !important;
+  }
+}
+@media (max-width: 1100px) {
+  .blog-box {
+    width: 70% !important;
+    @include flexcenter(column !important, none !important);
+  }
+  .box-bg p {
+    padding: 1rem 2rem !important;
+  }
+  .card img {
+    width: 50% !important;
+  }
+  .card-reverse img {
+    width: 50% !important;
+  }
+}
+@media (max-width: 900px) {
+  .card {
+    @include flexcenter(column !important, $white !important);
+  }
+  .card img {
+    width: 100% !important;
+  }
+  .card-reverse {
+    @include flexcenter(column !important, $white !important);
+  }
+  .card-reverse img {
+    width: 100% !important;
+  }
+  .card-title {
+    padding-top: 1rem !important;
+  }
+  .card-p {
+    padding-bottom: 20px !important;
+  }
+  .galery-box {
+    @include flexcenter(row !important, none !important);
+  }
+  .galery-box a {
+    width: 50%;
+  }
+
+  .galery-txt {
+    text-align: start !important;
+    padding-bottom: 2rem;
+  }
+  .galery-txt::after {
+    display: none !important;
+  }
+}
